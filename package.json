@@ -1,0 +1,27 @@
+{
+  "name": "hydrosentinel",
+  "version": "1.0.0",
+  "description": "HydroSentinel - Hydrogen Storage Facility Monitoring, Maintenance & Safety Compliance Platform",
+  "scripts": {
+    "install:server": "cd server && npm install",
+    "install:client": "cd client && npm install",
+    "install:all": "npm run install:server && npm run install:client",
+    "start": "./start.sh",
+    "db": "nohup /Users/niggacaster/mongodb/bin/mongod --dbpath /Users/niggacaster/mongodb_data > /dev/null 2>&1 &",
+    "seed": "cd server && npm run seed",
+    "dev:server": "cd server && npm run dev",
+    "dev:client": "cd client && npm run dev",
+    "test:server": "cd server && npm test",
+    "build:client": "cd client && npm run build"
+  },
+  "keywords": [
+    "hydrogen",
+    "monitoring",
+    "safety",
+    "iot",
+    "mern",
+    "compliance"
+  ],
+  "author": "Engineering Capstone Team",
+  "license": "MIT"
+}
