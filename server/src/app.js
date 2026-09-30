@@ -45,7 +45,17 @@ if (process.env.NODE_ENV !== 'test') {
 // Global API rate limiting
 app.use('/api', apiLimiter);
 
-// Health check endpoint
+// Root & Health check endpoints
+app.get('/', (req, res) => {
+  res.status(200).json({
+    success: true,
+    system: 'HydroSentinel Industrial Hydrogen Monitoring Platform API',
+    status: 'online',
+    version: '1.0.0',
+    healthCheck: '/api/health'
+  });
+});
+
 app.get('/api/health', (req, res) => {
   res.status(200).json({
     status: 'online',
